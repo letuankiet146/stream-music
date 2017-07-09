@@ -1,0 +1,13 @@
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>My sound</title>
+</head>
+<body>
+	<div style="width: 300; padding: 5" th:object="${song}">
+		<audio controls>
+			<source th:src="@{/audio-api/}+${song.id}+'.mp3'" type="audio/mp3" />
+		</audio>
+	</div>
+</body>
+</audio>

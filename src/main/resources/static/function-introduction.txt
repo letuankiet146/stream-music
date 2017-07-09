@@ -1,0 +1,12 @@
+Technical
+	- Server side: 	Spring boot, spring mvc, spring data mongodb
+	- Client side: 	Thymleaf
+	- Database: 	MongoDB
+Features
+1. Upload music
+2. Search music
+3. Play music which be searched
+4. Set connect timeout 
+5. Set Size file is uploaded
+6. Using "search text" technical of Mongodb (Customize Repository of Mongo Repository).
+7. Using defaul method of MongoDB Repository.

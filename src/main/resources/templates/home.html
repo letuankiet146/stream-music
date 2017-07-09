@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>My sound</title>
+<!-- Bootstrap styles -->
+<link href="css/bootstrap.css" rel="stylesheet" />
+<!-- Customize styles -->
+<link href="style.css" rel="stylesheet" />
+</head>
+<body>
+	<form th:action="@{/search}" method="get" >
+		<div class="form-group" style="padding:10;">
+			<input type="text" class="form-control" name="name" >
+		<input class="btn btn-default" type="submit"></<input>
+		</div>
+	</form>
+	<form th:action="@{/upload}" method="post" enctype="multipart/form-data" >
+		<div class="form-group2" style="padding:10;">
+			<input type="file" class="btn btn-default btn-file" name="fileUpload" >
+		<input class="btn btn-default" type="submit" ></<input>
+		</div>
+	</form>
+	
+	<div style="width: 300; padding: 5">
+		<table class="table table-striped" >
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+			</tr>
+			<tr th:each="emp : ${listSong}">
+				<td> <a th:href="@{/audio-api-page/}+${emp.id}+'.mp3'" th:text="${emp.id}"></a> </td>
+				<td th:text="${emp.name}">Unknow</td>
+			</tr>
+		</table>
+	</div>
+</body>
