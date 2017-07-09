@@ -18,7 +18,7 @@ public class TestMysqlController {
 	@RequestMapping("/save")
 	public @ResponseBody String save(@RequestParam String name, @RequestParam String email){
 		crudMethod.save(new TestMysqlObject(name, email));
-		return "saved";
+		return "save is good";
 	}
 	
 	@RequestMapping("/findAll")
